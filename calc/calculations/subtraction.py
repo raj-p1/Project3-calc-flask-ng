@@ -9,6 +9,6 @@ class Subtraction(Calculation):
         """get the subtraction results"""
         difference_of_values = 0.0
         for value in self.values:
-            difference_of_values =   difference_of_values - value
+            difference_of_values =    value - difference_of_values
             pprint.pprint(value)
         return difference_of_values
