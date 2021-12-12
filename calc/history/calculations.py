@@ -2,9 +2,19 @@
 from calc.calculations.addition import Addition
 from calc.calculations.subtraction import Subtraction
 from calc.calculations.multiplication import Multiplication
+#from csvmanager.write import DataFrameToCSVFile
+#import pandas as pd
 class Calculations:
     """Calculations class manages the history of calculations"""
     history = []
+
+    @staticmethod
+    def readHistoryFromCSV():
+        """Read the history from csv and put it into the history """
+    @staticmethod
+    def writeHistoryToCSV():
+        """Write the history to csv file"""
+
     # pylint: disable=too-few-public-methods
     @staticmethod
     def clear_history():
