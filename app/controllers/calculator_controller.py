@@ -22,7 +22,7 @@ class CalculatorController(ControllerBase):
             # this will call the correct operation
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_last_result_value())
-            test_write_csv(value1, value2,result)
+            test_write_csv(value1, value2,result,operation)
             test_store = list(test_read_csv())
             return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result, test_store=test_store)
         return render_template('calculator.html', error=error)

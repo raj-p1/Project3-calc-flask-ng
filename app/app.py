@@ -2,6 +2,9 @@
 from flask import Flask
 from app.controllers.index_controller import IndexController
 from app.controllers.calculator_controller import CalculatorController
+from app.controllers.oop_controller import OOPTermsController
+from app.controllers.oop_principles_controller import OOPPrinciplesController
+from app.controllers.aaa_controller import AAAController
 from werkzeug.debug import DebuggedApplication
 
 app = Flask(__name__)
@@ -19,3 +22,13 @@ def calculator_get():
 @app.route("/calculator", methods=['POST'])
 def calculator_post():
     return CalculatorController.post()
+
+@app.route("/oop_terms", methods=['GET'])
+def oop_get():
+    return OOPTermsController.get()
+@app.route("/oop_principles", methods=['GET'])
+def oop_principles_get():
+    return OOPPrinciplesController.get()
+@app.route("/aaa", methods=['GET'])
+def aaa_get():
+    return AAAController.get()

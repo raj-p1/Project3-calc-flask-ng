@@ -5,7 +5,7 @@ from csvmanager.write import Write
 from csvmanager.read import Read
 import pandas as pd
 
-def test_write_csv(value_1, value_2, result):
+def test_write_csv(value_1, value_2, result, operation):
     """testing that our calculator has a static method for addition"""
     #Arrange
     filename = 'csv_output.csv'
@@ -14,7 +14,9 @@ def test_write_csv(value_1, value_2, result):
     name_dict = {
         'value1': [value_1],
         'value2': [value_2],
-        'result': [result]
+        'result': [result],
+        'operation':[operation]
+
     }
 
     df = pd.DataFrame(name_dict)

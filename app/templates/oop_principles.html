@@ -3,68 +3,66 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        .important {
-            color: #336699;
-        }
+        .important { color: #336699; }
     </style>
 {% endblock %}
 {% block content %}
 <div class="p-5 bg-primary text-white rounded">
     <div class="row">
         <div class="col-md-2">
-            <img src="/static/images/calculator.png" class="rounded float-left w-100" alt="internet"
+            <img src="/static/images/oop_logo.png" class="rounded float-left w-100" alt="oops logo"
                  style="display:block; float:right;margin-right:20px;">
         </div>
         <div class="col-md-8">
-            <h1 class="display-2">My Calculator</h1>
-            <p>with flask & jinja</p>
+            <h1 class="display-2">OOP Principles</h1>
+            <p>using python</p>
         </div>
     </div>
 </div>
+
+
 <div class="container-fluid ">
     <div class="row d-flex justify-content-around p-2">
         <div class="col-md-8 p-2 border border-1">
-            <div class="mb-3 row">
-                {% if error %}
-                <div class="alert alert-danger error" role="alert">
-                    {{ error }}
-                </div>
-                {% endif %}
-            </div>
-            <form action="/calculator" method="POST">
-               <h1 class="text-center">Calculator</h1>
-                <label for="value1" class="col-sm-2 col-form-label">Value 1:</label><br>
-                <input type="text" id="value1" class="form-control" name="value1"
-                    placeholder="Please enter value 1"><br>
-                <label for="value2" class="col-sm-2 col-form-label">Value 2:</label><br>
-                <input type="text" id="value2" name="value2" class="form-control"
-                    placeholder="Please enter value 2"><br>
-                <fieldset class="d-grid gap-2">
-                    <legend>Operation</legend>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" value="addition" id="addition" name="operation">
-                    <label class="form-check-label" for="addition">Addition</label>
-                  </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" value="subtraction" id="subtraction" name="operation">
-                    <label class="form-check-label" for="subtraction">Subtraction</label>
-                  </div>
-                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="multiplication" id="multiplication" name="operation">
-                    <label class="form-check-label" for="multiplication">Multiplication</label>
-                  </div>
-                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="division" id="division" name="operation">
-                    <label class="form-check-label" for="division">Division</label>
-                  </div>
-                </fieldset>
+            <h1 class="text-center">Object-Oriented Programming Principles </h1>
+           <!-- <img src="img/question1.jpg" class="rounded float-left w-50 d-block m-auto" alt="internet">-->
 
-               <div class="d-grid gap-2">
-                <input type="button" class="btn btn-success" value="Submit">
-               </div>
-            </form>
-        </div>
-    <div class="col-md-3 p-2 bg-light border border-1">
+            <h3>What is an Encapsulation?</h3>
+            <p>It describes the idea of wrapping data and the methods that work on data within one unit. This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data. To prevent accidental change, an object’s variable can only be changed by an object’s method. Those types of variables are known as private variable.
+            </p>
+            <p>A class is an example of encapsulation as it encapsulates all the data that is member functions, variables, etc.</p>
+
+            <img src="/static/images/oop.JPG" class="rounded float-left w-50 d-block m-auto" alt="oop">
+
+            <h3>What is an Inheritance?</h3>
+            <p>Inheritance is the capability of one class to derive or inherit the properties from another class.</p>
+            <p>The class Calculation is inherited and used in Addition class as seen in the above image.</p>
+            <img src="/static/images/oop1.JPG" class="rounded float-left w-50 d-block m-auto" alt="oop1">
+
+             <h3>What is Polymorphism?</h3>
+            <p>The word polymorphism means having many forms. In programming, polymorphism means the same function name (but different signatures) being used for different types.
+            </p>
+            <p>
+                The below example shows polymorphism as in Addition function we can use it to add 2 numbers and also for 3 numbers.
+            </p>
+             <img src="/static/images/oop2.JPG" class="rounded float-left w-50 d-block m-auto" alt="oop2">
+              <h3>What is an Abstraction?</h3>
+            <p>Abstraction is used to hide the internal functionality of the function from the users.</p>
+
+            <img src="/static/images/oop3.JPG" class="rounded float-left w-50 d-block m-auto" alt="oop3">
+            <p>The users only interact with the basic implementation of the function, but inner working is hidden. User is familiar with that <span style="font-weight: bold">"what function does"</span> but they don't know <span style="font-weight: bold">"how it does"</span>.</p>
+            <div class="row">
+                <div class="col-md-12 bg-dark text-white text-center">
+                    <p class="display-6">"The dream behind the Web is of a common information space in which we
+                        communicate by sharing information. Its universality is essential: the fact that a hypertext
+                        link can point to anything, be it personal, local or global, be it draft or highly
+                        polished."</p>
+                    <h2>Tim Berners-Lee (1998)</h2>
+                </div>
+            </div>
+
+    </div>
+        <div class="col-md-3 p-2 bg-light border border-1">
             <img src="/static/images/girl2.jpg" class="rounded float-left w-100" alt="internet">
             <img src="/static/images/thing.jpg" class="rounded float-left w-100" alt="internet">
 
@@ -163,8 +161,4 @@
         </div>
     </div>
 </div>
-
-
-
-
 {% endblock %}

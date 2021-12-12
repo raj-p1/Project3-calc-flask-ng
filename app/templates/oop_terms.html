@@ -3,68 +3,87 @@
 {% block head %}
     {{ super() }}
     <style type="text/css">
-        .important {
-            color: #336699;
-        }
+        .important { color: #336699; }
     </style>
 {% endblock %}
 {% block content %}
-<div class="p-5 bg-primary text-white rounded">
+  <div class="p-5 bg-primary text-white rounded">
     <div class="row">
         <div class="col-md-2">
-            <img src="/static/images/calculator.png" class="rounded float-left w-100" alt="internet"
+            <img src="/static/images/oop_terms.png" class="rounded float-left w-100" alt="oopterms"
                  style="display:block; float:right;margin-right:20px;">
         </div>
         <div class="col-md-8">
-            <h1 class="display-2">My Calculator</h1>
-            <p>with flask & jinja</p>
+            <h1 class="display-2">OOP Terms</h1>
+            <p>with pylint</p>
         </div>
     </div>
 </div>
+
+
 <div class="container-fluid ">
     <div class="row d-flex justify-content-around p-2">
         <div class="col-md-8 p-2 border border-1">
-            <div class="mb-3 row">
-                {% if error %}
-                <div class="alert alert-danger error" role="alert">
-                    {{ error }}
-                </div>
-                {% endif %}
-            </div>
-            <form action="/calculator" method="POST">
-               <h1 class="text-center">Calculator</h1>
-                <label for="value1" class="col-sm-2 col-form-label">Value 1:</label><br>
-                <input type="text" id="value1" class="form-control" name="value1"
-                    placeholder="Please enter value 1"><br>
-                <label for="value2" class="col-sm-2 col-form-label">Value 2:</label><br>
-                <input type="text" id="value2" name="value2" class="form-control"
-                    placeholder="Please enter value 2"><br>
-                <fieldset class="d-grid gap-2">
-                    <legend>Operation</legend>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" value="addition" id="addition" name="operation">
-                    <label class="form-check-label" for="addition">Addition</label>
-                  </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" value="subtraction" id="subtraction" name="operation">
-                    <label class="form-check-label" for="subtraction">Subtraction</label>
-                  </div>
-                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="multiplication" id="multiplication" name="operation">
-                    <label class="form-check-label" for="multiplication">Multiplication</label>
-                  </div>
-                   <div class="form-check">
-                    <input class="form-check-input" type="radio" value="division" id="division" name="operation">
-                    <label class="form-check-label" for="division">Division</label>
-                  </div>
-                </fieldset>
+            <h1 class="text-center">Object-Oriented Programming and Pylint </h1>
 
-               <div class="d-grid gap-2">
-                <input type="button" class="btn btn-success" value="Submit">
-               </div>
-            </form>
-        </div>
-    <div class="col-md-3 p-2 bg-light border border-1">
+
+            <h3>What is Class?</h3>
+            <p>A class is like a blueprint of data member and functions and object is an instance of class.
+            </p>
+            <p>Example-- "class Calculation :"</p>
+
+            <img src="/static/images/oop.JPG" class="rounded float-left w-50 d-block m-auto" alt="oop">
+
+            <h3>What is an Object?</h3>
+            <p>An object (instance) is an instantiation of a class. When class is defined, only the description for the object is defined. Therefore, no memory or storage is allocated.
+            </p>
+             <h3>What are Methods?</h3>
+            <p>An object (instance) is an instantiation of a class. When class is defined, only the description for the object is defined. Therefore, no memory or storage is allocated.
+            </p>
+              <h3>What is  Namespace?</h3>
+            <p>In Python, you can imagine a namespace as a mapping of every name you have defined to corresponding objects.
+            </p>
+                <h3>What is a Constructor?</h3>
+            <p>A constructor is a special type of subroutine called to create an object. It prepares the new object for use, often accepting arguments that the constructor uses to set required member variables.</p>
+              <h3>What is a Property?</h3>
+            <p>The code defining the data managed by the class.</p>
+              <h3>What is a Factory?</h3>
+            <p>A factory is an object for creating other objects. It is a function or method that returns objects of a varying prototype or class from some method call, which is assumed to be "new".</p>
+              <h3>What is Instantiation?</h3>
+            <p>It is the creation of a real instance or particular realization of an abstraction or template such as a class of objects or a computer process</p>
+              <h3>What is a Fixture?</h3>
+            <p>A fixture is a function that has logic that is applied to a specific context.</p>
+              <h3>What is a Type Hint?</h3>
+            <p>It is a formal solution to statically indicate the type of a value within your Python code.</p>
+              <h3>What is a Type Cast?</h3>
+            <p>It is a process in which we convert a literal of one type to another. Inbuilt functions int(), float() and str() shall be used for typecasting. int() can take a float or string literal as argument and returns a value of class 'int' type.</p>
+              <h3>What is Unit Test?</h3>
+            <p>Unit testing is a software testing method by which individual units of source code are put under various tests to determine whether they are fit for use (Source). It determines and ascertains the quality of your code.</p>
+              <h3>What is Static  Method?</h3>
+            <p>Adding the static modifier on a member of the class (property or method) defines that the member belongs to the class itself, not an instance of the class.</p>
+              <h3>What is Design Patterns?</h3>
+            <p>The pattern typically shows relationships and interactions between classes or objects.</p>
+            <h3>What is Facade?</h3>
+            <p>Facade is a structural design pattern that provides a simplified (but limited) interface to a complex system of classes, library or framework. While Facade decreases the overall complexity of the application, it also helps to move unwanted dependencies to one place.</p>
+
+              <h3>What is PYLINT?</h3>
+            <p>Pylint is a tool that checks for errors in Python code, tries to enforce a coding standard and looks for code smells. It can also look for certain type errors, it can recommend suggestions about how particular blocks can be refactored and can offer you details about the code's complexity.</p>
+             <img src="/static/images/pylint.JPG" class="rounded float-left w-50 d-block m-auto" alt="pylint">
+            <p>To check code coverage use --cov with pylint</p>
+
+
+            <div class="row">
+                <div class="col-md-12 bg-dark text-white text-center">
+                    <p class="display-6">"The dream behind the Web is of a common information space in which we
+                        communicate by sharing information. Its universality is essential: the fact that a hypertext
+                        link can point to anything, be it personal, local or global, be it draft or highly
+                        polished."</p>
+                    <h2>Tim Berners-Lee (1998)</h2>
+                </div>
+            </div>
+
+    </div>
+        <div class="col-md-3 p-2 bg-light border border-1">
             <img src="/static/images/girl2.jpg" class="rounded float-left w-100" alt="internet">
             <img src="/static/images/thing.jpg" class="rounded float-left w-100" alt="internet">
 
@@ -163,8 +182,4 @@
         </div>
     </div>
 </div>
-
-
-
-
 {% endblock %}

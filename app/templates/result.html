@@ -1,60 +1,78 @@
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
 {% block head %}
-    {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
-{% endblock %}
-{% block content %}
-    <h1>Calculation Result</h1>
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-        {% for message in messages %}
-            <div class="alert alert-success" role="alert">
-                {{ message }}
-            </div>
-        {% endfor %}
-    {% endif %}
-{% endwith %}
-    <strong>Value 1: </strong> {{ value1 }} <br>
-    <strong>Value 2: </strong> {{ value2 }} <br>
-    <strong>Operation: </strong> {{ operation }} <br>
-    <strong>Result: </strong> {{ result }}
-
-   <!--Table-->
-<table style="margin-left: 20px;">
- <style type="text/css">
-
-
-    tr:nth-of-type(2n){
-        border: 1px solid black;
-        background-color: rgba(150, 150, 150, 0.5);
-
-    }
-
-    td{
-        padding: 8px 8px;
-        border: 1px solid black;
+{{ super() }}
+<style type="text/css">
+    .important {
+        color: #336699;
     }
 </style>
-<th>
-        <tr style="color: green; ">
-        <td>Value 1</td>
-        <td>Value 2</td>
-            <td>Result</td>
-            <td>Operation</td>
-</tr>
-    </th>
-  {% for test_result in test_store %}
-   <tr>
-                  <td>{{ test_result[0] }}</td>
-                  <td>{{ test_result[1] }}</td>
-                  <td>{{ test_result[2] }}</td>
-                    <td>{{ operation}}</td>
+{% endblock %}
+{% block content %}
+<div class="p-5 bg-primary text-white rounded">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="/static/images/calculator.png" class="rounded float-left w-100" alt="internet"
+                style="display:block; float:right;margin-right:20px;">
+        </div>
+        <div class="col-md-8">
+            <h1 class="display-2">Calculator Result</h1>
+            <p>with flask & jinja</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row d-flex justify-content-around p-2">
+        <div class="col-md-8 p-2 border border-1">
+            <div class="mb-3 row">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert alert-success" role="alert">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+            <strong>Value 1: </strong> {{ value1 }} <br>
+            <strong>Value 2: </strong> {{ value2 }} <br>
+            <strong>Operation: </strong> {{ operation }} <br>
+            <strong>Result: </strong> {{ result }}
+
+            <!--Table-->
+            <table style="margin-left: 20px;">
+                <style type="text/css">
+                    tr:nth-of-type(2n) {
+                        border: 1px solid black;
+                        background-color: rgba(150, 150, 150, 0.5);
+
+                    }
+
+                    td {
+                        padding: 8px 8px;
+                        border: 1px solid black;
+                    }
+                </style>
+                <th>
+                    <tr style="color: green; ">
+                        <td>Value 1</td>
+                        <td>Value 2</td>
+                        <td>Result</td>
+                        <td>Operation</td>
+                    </tr>
+                </th>
+                {% for test_result in test_store %}
+                <tr>
+                    <td>{{ test_result[0] }}</td>
+                    <td>{{ test_result[1] }}</td>
+                    <td>{{ test_result[2] }}</td>
+                    <td>{{ test_result[3]}}</td>
 
                 </tr>
-  {% endfor %}
-</table>
-
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
 {% endblock %}
