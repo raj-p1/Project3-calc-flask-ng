@@ -1,10 +1,10 @@
-Project 3 
+Project 3: The screenshots are attached below: 
 ## Raj Patel
 
-Output for Flash Error Message Assignment:
+## Output for Flash Error Message Assignment:
 ![Screenshot for Project Assignment 1](images/project%203_2.png)
 ![Screenshot for Project Assignment 1](images/project%203_1.png)
 
-Output for Beautiful Tables Assignment:
+## Output for Beautiful Tables Assignment:
 ![Screenshot for Tables](images/project%203_3.png )
 
